@@ -1,4 +1,6 @@
-const EventTracking =() => {
+const CircuitBreaker = require('./CircuitBreaker')
+
+const EventTracking = () => {
     return {
         healthcheckStatus: status => {
             console.log(`Healthcheck status ${status}`);
@@ -8,7 +10,7 @@ const EventTracking =() => {
             console.log(`call failed ${message}`);
             console.log("------------------------------");
         }
-    }
+    };
 };
 
 module.exports = EventTracking;
